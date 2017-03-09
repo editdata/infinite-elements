@@ -56,4 +56,4 @@ This module is inspired by / partially extracted from [view-list](https://npmjs.
 
 ## License
 
-[ISC](LICENSE.md)
+[MIT](LICENSE.md)

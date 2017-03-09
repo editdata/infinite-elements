@@ -20,7 +20,7 @@
     "editdata"
   ],
   "author": "sethvincent",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/editdata/infinite-elements/issues"
   },
