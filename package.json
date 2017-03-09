@@ -1,0 +1,39 @@
+{
+  "name": "infinite-elements",
+  "version": "0.0.0",
+  "description": "infinite scroll",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify tests/index.js | tape-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/editdata/infinite-elements.git"
+  },
+  "keywords": [
+    "infinite scroll",
+    "infinite list",
+    "bel",
+    "yo-yo",
+    "morphdom",
+    "choo",
+    "editdata"
+  ],
+  "author": "sethvincent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/editdata/infinite-elements/issues"
+  },
+  "homepage": "https://github.com/editdata/infinite-elements#readme",
+  "dependencies": {
+    "bel": "^4.5.1",
+    "debounce": "^1.0.0",
+    "nanomorph": "^3.0.1",
+    "yo-yo": "^1.4.0"
+  },
+  "devDependencies": {
+    "standard": "^9.0.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3",
+  }
+}
