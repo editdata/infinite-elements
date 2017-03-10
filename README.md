@@ -26,9 +26,11 @@ var rows = []
 
 // generate some rows for demonstration purposes
 for (var i = 0; i < 500; i++) {
-  var el = html`<div>this is row ${i}</div>`
-  el.style.height = '30px'
-  el.id = `id-${i}` // setting an ID is required!
+  // setting an ID is required!
+  var el = html`<div id="row-${i}" style="height: 30px;">
+    this is row ${i}
+  </div>` 
+
   rows.push(el)
 }
 

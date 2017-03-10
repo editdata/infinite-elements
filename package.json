@@ -32,8 +32,10 @@
     "yo-yo": "^1.4.0"
   },
   "devDependencies": {
+    "sheetify": "^6.0.1",
     "standard": "^9.0.1",
     "tap-spec": "^4.1.1",
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "xhr": "^2.4.0"
   }
 }

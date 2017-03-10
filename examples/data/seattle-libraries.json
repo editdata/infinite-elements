@@ -1,0 +1,291 @@
+[ {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=5"
+  },
+  "address" : "12755 GREENWOOD AV N",
+  "latitude" : "47.723004",
+  "common_name" : "Broadview",
+  "longitude" : "-122.356032"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=8"
+  },
+  "address" : "5423 DELRIDGE WAY SW",
+  "latitude" : "47.553047",
+  "common_name" : "Delridge",
+  "longitude" : "-122.363319"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=11"
+  },
+  "address" : "7364 E GREEN LAKE DR N",
+  "latitude" : "47.681501",
+  "common_name" : "Green Lake",
+  "longitude" : "-122.326717"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=14"
+  },
+  "address" : "713 8TH AV S",
+  "latitude" : "47.596249",
+  "common_name" : "International District",
+  "longitude" : "-122.322834"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_mobile&branchID=30"
+  },
+  "address" : "2025 9TH AV",
+  "latitude" : "47.616804",
+  "common_name" : "Mobile Services",
+  "longitude" : "-122.337025"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=15"
+  },
+  "address" : "12501 28TH AV NE",
+  "latitude" : "47.719861",
+  "common_name" : "Lake City",
+  "longitude" : "-122.298087"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=16"
+  },
+  "address" : "1134 33RD AV",
+  "latitude" : "47.612674",
+  "common_name" : "Madrona\\Sally Goldmark",
+  "longitude" : "-122.290014"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=17"
+  },
+  "address" : "2801 34TH AV W",
+  "latitude" : "47.645316",
+  "common_name" : "Magnolia",
+  "longitude" : "-122.401344"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=18"
+  },
+  "address" : "2401 24TH AV E",
+  "latitude" : "47.639747",
+  "common_name" : "Montlake",
+  "longitude" : "-122.301591"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=19"
+  },
+  "address" : "7058 32ND AV S",
+  "latitude" : "47.538994",
+  "common_name" : "Newholly",
+  "longitude" : "-122.290951"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=20"
+  },
+  "address" : "6801 35TH AV NE",
+  "latitude" : "47.677854",
+  "common_name" : "North East",
+  "longitude" : "-122.290711"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=21"
+  },
+  "address" : "10548 5TH AV NE",
+  "latitude" : "47.706193",
+  "common_name" : "Northgate",
+  "longitude" : "-122.322677"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=22"
+  },
+  "address" : "400 W GARFIELD ST",
+  "latitude" : "47.633781",
+  "common_name" : "Queen Anne",
+  "longitude" : "-122.362744"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=23"
+  },
+  "address" : "9125 RAINIER AV S",
+  "latitude" : "47.521356",
+  "common_name" : "Rainier Beach",
+  "longitude" : "-122.270465"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=26"
+  },
+  "address" : "9010 35TH AV SW",
+  "latitude" : "47.522442",
+  "common_name" : "Southwest",
+  "longitude" : "-122.376182"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.wtbbl.org/"
+  },
+  "address" : "2021 9TH AV",
+  "latitude" : "47.61668",
+  "common_name" : "Talking Book\\  & Braille",
+  "longitude" : "-122.336823"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=27"
+  },
+  "address" : "5009 ROOSEVELT WY NE",
+  "latitude" : "47.665539",
+  "common_name" : "University",
+  "longitude" : "-122.317863"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=28"
+  },
+  "address" : "1501 N 45TH ST",
+  "latitude" : "47.661174",
+  "common_name" : "Wallingford",
+  "longitude" : "-122.339104"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=29"
+  },
+  "address" : "2306 42ND AV SW",
+  "latitude" : "47.582695",
+  "common_name" : "West Seattle",
+  "longitude" : "-122.384757"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=3"
+  },
+  "address" : "5614 22ND AV NW",
+  "latitude" : "47.669843",
+  "common_name" : "Ballard",
+  "longitude" : "-122.384204"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=4"
+  },
+  "address" : "2821 BEACON AV S",
+  "latitude" : "47.578046",
+  "common_name" : "Beacon Hill",
+  "longitude" : "-122.311407"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=6"
+  },
+  "address" : "425 HARVARD AV E",
+  "latitude" : "47.622914",
+  "common_name" : "Capitol Hill",
+  "longitude" : "-122.322451"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_central&branchID=1"
+  },
+  "address" : "1000 4TH AV",
+  "latitude" : "47.606485",
+  "common_name" : "Central",
+  "longitude" : "-122.332968"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=7"
+  },
+  "address" : "4721 RAINIER AV S",
+  "latitude" : "47.559947",
+  "common_name" : "Columbia",
+  "longitude" : "-122.286879"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=9"
+  },
+  "address" : "2300 E YESLER WAY",
+  "latitude" : "47.601903",
+  "common_name" : "Douglas-Truth",
+  "longitude" : "-122.301832"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=10"
+  },
+  "address" : "731 N 35TH ST",
+  "latitude" : "47.650068",
+  "common_name" : "Fremont",
+  "longitude" : "-122.3484"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=12"
+  },
+  "address" : "8016 GREENWOOD AV N",
+  "latitude" : "47.687497",
+  "common_name" : "Greenwood",
+  "longitude" : "-122.354965"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=13"
+  },
+  "address" : "3411 SW RAYMOND ST",
+  "latitude" : "47.548042",
+  "common_name" : "High Point",
+  "longitude" : "-122.375814"
+}
+, {
+  "city_feature" : "Libraries",
+  "website" : {
+    "url" : "http://www.spl.org/default.asp?pageID=branch_open&branchID=25"
+  },
+  "address" : "8604 8th Ave S",
+  "latitude" : "47.52627",
+  "common_name" : "South Park Branch",
+  "longitude" : "-122.32259"
+}
+ ]

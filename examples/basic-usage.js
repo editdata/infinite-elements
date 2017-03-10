@@ -1,6 +1,6 @@
 var html = require('yo-yo')
 
-var infiniteElements = require('./index')
+var infiniteElements = require('../index')
 
 var i = 0
 var l = 200
@@ -17,10 +17,9 @@ setInterval(function () {
 }, 1000)
 
 function createRow (i) {
-  var el = html`<div>this is row ${i}</div>`
-  el.style.height = '30px'
-  el.id = `id-${i}`
-  return el
+  return html`<div id="row-${i}" style="height: 30px;">
+    this is row ${i}
+  </div>`
 }
 
 var tree = infiniteElements(rows, {

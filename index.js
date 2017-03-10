@@ -10,14 +10,21 @@ module.exports = function infiniteElements (elements, options) {
   var renderTop = 0
   var renderBottom = 0
   var scrollTop = 0
+  var classList = options.class ? 'container ' + options.class : 'container'
+  var eachRow = options.eachRow
+
+  var tree = html`<div class="${classList}" onscroll=${debounce(onscroll, 50)}></div>`
 
   function render (rows) {
+    console.time('infiniteElements:render')
     var rowsToRender = fillRenderArea(rows)
-    var tree = html`<div class="container" onscroll=${debounce(onscroll, 50)}>
+    console.log('rowsToRender.length', rowsToRender.length)
+    tree.innerHTML = '';
+    tree.appendChild(html`<div style="height:100%;">
       ${topRow()}
-      ${rowsToRender}
+      ${rowsToRender.map(eachRow)}
       ${bottomRow()}
-    </div>`
+    </div>`)
 
     tree.style.height = options.height + 'px'
     tree.style['overflow-y'] = 'scroll'
@@ -29,9 +36,12 @@ module.exports = function infiniteElements (elements, options) {
 
       // var tree = morph(container, tree)
       // document.body.replaceChild(container, tree)
+      console.time('infiniteElements:render:update')
       html.update(container, tree)
+      console.timeEnd('infiniteElements:render:update')
     }
 
+    console.timeEnd('infiniteElements:render')
     tree.render = render
     return tree
   }
