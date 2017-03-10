@@ -4,7 +4,7 @@ var request = require('xhr')
 
 var infiniteElements = require('../index')
 
-request({ url: 'http://127.0.0.1:9966/data/seattle-online-communities.json', json: true }, function (err, res, body) {
+request({ url: 'http://127.0.0.1:9966/data/seattle-library-checkouts.json', json: true }, function (err, res, body) {
   var count = body.length
 
   var layout = createLayout({
@@ -16,7 +16,7 @@ request({ url: 'http://127.0.0.1:9966/data/seattle-online-communities.json', jso
   var tree = html`
   <div style="height:100%''">
     ${layout(body)}
-    <p><b>${count} rows</b></p>
+    <p>Seattle Library book checkouts by title. <b>${count} rows</b></p>
   </div>`
   console.timeEnd('grid')
   document.body.appendChild(tree)
