@@ -7,16 +7,15 @@ var l = 200
 var rows = []
 
 for (i; i < l; i++) {
-  rows.push(createRow(i))
+  rows.push(i)
 }
 
 setInterval(function () {
-  var i = rows.length
-  rows.push(createRow(i))
+  rows.push(rows.length)
   tree.render(rows)
 }, 1000)
 
-function createRow (i) {
+function eachRow (i) {
   return html`<div id="row-${i}" style="height: 30px;">
     this is row ${i}
   </div>`
@@ -24,7 +23,8 @@ function createRow (i) {
 
 var tree = infiniteElements(rows, {
   height: 300,
-  rowHeight: 30
+  rowHeight: 30,
+  eachRow: eachRow
 })
 
 document.body.appendChild(tree)

@@ -26,17 +26,19 @@ var rows = []
 
 // generate some rows for demonstration purposes
 for (var i = 0; i < 500; i++) {
-  // setting an ID is required!
-  var el = html`<div id="row-${i}" style="height: 30px;">
-    this is row ${i}
-  </div>` 
+  rows.push(i)
+}
 
-  rows.push(el)
+function eachRow (i) {
+  return html`<div id="row-${i}" style="height: 30px;">
+    this is row ${i}
+  </div>`
 }
 
 var tree = infiniteElements(rows, {
   height: 300,
-  rowHeight: 30
+  rowHeight: 30,
+  eachRow: eachRow
 })
 
 document.body.appendChild(tree)
@@ -47,7 +49,8 @@ tree.render(rows)
 ```
 
 ## Examples
-- [Basic example](example.js)
+- [Basic example](examples/basic-usage.js)
+- [Grid](examples/grid.js)
 
 ## See also
 
