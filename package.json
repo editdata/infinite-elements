@@ -4,6 +4,8 @@
   "description": "infinite scroll",
   "main": "index.js",
   "scripts": {
+    "example:grid": "budo ./examples/grid.js --dir ./examples/ -l -- -t sheetify/transform",
+    "example:basic": "budo ./examples/basic-usage.js --dir ./examples/ -l -- -t sheetify/transform",
     "test": "browserify tests/index.js | tape-run"
   },
   "repository": {
@@ -26,14 +28,13 @@
   },
   "homepage": "https://github.com/editdata/infinite-elements#readme",
   "dependencies": {
-    "bel": "^4.5.1",
+    "bel": "^4.6.0",
     "debounce": "^1.0.0",
-    "nanomorph": "^3.0.1",
-    "yo-yo": "^1.4.0"
+    "nanomorph": "^4.0.2"
   },
   "devDependencies": {
     "sheetify": "^6.0.1",
-    "standard": "^9.0.1",
+    "standard": "^9.0.2",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3",
     "xhr": "^2.4.0"

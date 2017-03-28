@@ -1,6 +1,5 @@
-// var html = require('bel')
-// var morph = require('nanomorph')
-var html = require('yo-yo')
+var html = require('bel')
+var morph = require('nanomorph')
 var debounce = require('debounce')
 
 module.exports = function infiniteElements (elements, options) {
@@ -18,26 +17,28 @@ module.exports = function infiniteElements (elements, options) {
   function render (rows) {
     console.time('infiniteElements:render')
     var rowsToRender = fillRenderArea(rows)
-    console.log('rowsToRender.length', rowsToRender.length)
-    tree.innerHTML = '';
-    tree.appendChild(html`<div style="height:100%;">
+
+    var el = html`<div class="inner-wrapper" style="height:100%;">
       ${topRow()}
       ${rowsToRender.map(eachRow)}
       ${bottomRow()}
-    </div>`)
+    </div>`
+
+    var wrapper = tree.querySelector('.inner-wrapper')
+    if (wrapper) {
+      tree.replaceChild(el, wrapper)
+    } else {
+      tree.appendChild(el)
+    }
 
     tree.style.height = options.height + 'px'
     tree.style['overflow-y'] = 'scroll'
 
     var container = document.querySelector('.container')
-    if (container) {
-      // TODO: nanomorph needs node reordering before it can be used here
-      // https://github.com/yoshuawuyts/nanomorph/issues/8
 
-      // var tree = morph(container, tree)
-      // document.body.replaceChild(container, tree)
+    if (container) {
       console.time('infiniteElements:render:update')
-      html.update(container, tree)
+      morph(container, tree)
       console.timeEnd('infiniteElements:render:update')
     }
 
