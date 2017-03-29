@@ -1,9 +1,10 @@
+var assert = require('assert')
 var html = require('bel')
 var morph = require('nanomorph')
 var debounce = require('debounce')
 
-module.exports = function infiniteElements (elements, options) {
-  var rows = elements || []
+module.exports = function infiniteElements (rows, options) {
+  assert.equal(typeof options, 'object', 'inifite-elements: options object is required')
   var containerHeight = options.height
   var rowHeight = options.rowHeight
   var renderTop = 0
@@ -16,11 +17,20 @@ module.exports = function infiniteElements (elements, options) {
 
   function render (rows) {
     console.time('infiniteElements:render')
-    var rowsToRender = fillRenderArea(rows)
+    var slicedRows = fillRenderArea(rows)
+    var rowsToRender = []
+    var l = slicedRows.length
+    var i = 0
+
+    console.time('infiniteElements:slicedRows')
+    for (i; i < l; i++) {
+      rowsToRender[i] = eachRow(slicedRows[i], i)
+    }
+    console.timeEnd('infiniteElements:slicedRows')
 
     var el = html`<div class="inner-wrapper" style="height:100%;">
       ${topRow()}
-      ${rowsToRender.map(eachRow)}
+      ${rowsToRender}
       ${bottomRow()}
     </div>`
 
@@ -65,11 +75,13 @@ module.exports = function infiniteElements (elements, options) {
   }
 
   function fillRenderArea (rows) {
+    console.time('infiniteElements:fillRenderArea')
     var total = rows.length
     var rowsPerBody = Math.floor(containerHeight / rowHeight)
     renderTop = Math.round(Math.max(0, Math.floor(scrollTop / rowHeight) - rowsPerBody * 1.2))
     renderBottom = Math.round(Math.min(renderTop + 4 * rowsPerBody, total))
     var sliced = rows.slice(renderTop, renderBottom)
+    console.timeEnd('infiniteElements:fillRenderArea')
     return sliced
   }
 

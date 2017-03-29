@@ -149,14 +149,13 @@ function createRows (options) {
   `
 
   function row (data, i) {
-    console.time('grid:row')
     var cells = []
     var keys = Object.keys(data)
     var i = 0
     var l = keys.length
 
     for (i; i < l; i++) {
-      cells.push(cell({ key: keys[i], value: data[keys[i]] }))
+      cells[i] = cell({ key: keys[i], value: data[keys[i]] })
     }
 
     var el = html`<div id="row-${i}" class="data-grid-row">
@@ -165,7 +164,6 @@ function createRows (options) {
 
     el.style['list-style-type'] = 'none'
     el.style.height = rowHeight + 'px'
-    console.timeEnd('grid:row')
     return el
   }
 
