@@ -10,7 +10,7 @@ module.exports = function infiniteElements (rows, options) {
   var renderTop = 0
   var renderBottom = 0
   var scrollTop = 0
-  var classList = options.class ? 'container ' + options.class : 'container'
+  var classList = options.class ? 'infinite-elements-container ' + options.class : 'infinite-elements-container'
   var eachRow = options.eachRow
 
   var tree = html`<div class="${classList}" onscroll=${debounce(onscroll, 50)}></div>`
@@ -28,13 +28,13 @@ module.exports = function infiniteElements (rows, options) {
     }
     console.timeEnd('infiniteElements:slicedRows')
 
-    var el = html`<div class="inner-wrapper" style="height:100%;">
+    var el = html`<div class="infinite-elements-inner-wrapper" style="height:100%;">
       ${topRow()}
       ${rowsToRender}
       ${bottomRow()}
     </div>`
 
-    var wrapper = tree.querySelector('.inner-wrapper')
+    var wrapper = tree.querySelector('.infinite-elements-inner-wrapper')
     if (wrapper) {
       tree.replaceChild(el, wrapper)
     } else {
@@ -44,7 +44,7 @@ module.exports = function infiniteElements (rows, options) {
     tree.style.height = options.height + 'px'
     tree.style['overflow-y'] = 'scroll'
 
-    var container = document.querySelector('.container')
+    var container = document.querySelector('.infinite-elements-container')
 
     if (container) {
       console.time('infiniteElements:render:update')
@@ -58,13 +58,13 @@ module.exports = function infiniteElements (rows, options) {
   }
 
   function topRow () {
-    var row = html`<div></div>`
+    var row = html`<div class="infinite-elements-top-row"></div>`
     row.style.height = (renderTop * rowHeight) + 'px'
     return row
   }
 
   function bottomRow () {
-    var row = html`<div></div>`
+    var row = html`<div class="infinite-elements-bottom-row"></div>`
     row.style.height = ((rows.length - renderBottom) * rowHeight) + 'px'
     return row
   }
