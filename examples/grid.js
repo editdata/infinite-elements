@@ -5,6 +5,7 @@ var request = require('xhr')
 var infiniteElements = require('../index')
 
 request({ url: 'http://127.0.0.1:9966/data/seattle-library-checkouts.json', json: true }, function (err, res, body) {
+  if (err) return console.log(err)
   var count = body.length
 
   var layout = createLayout({
@@ -121,7 +122,7 @@ function createHeader (options) {
   `
 
   function render (key) {
-    var el =  html`<div class="data-grid-header ${prefix}">
+    var el = html`<div class="data-grid-header ${prefix}">
       <span class="data-grid-header-key">${key}</span>
     </div>`
 
@@ -134,7 +135,6 @@ function createHeader (options) {
 
 function createRows (options) {
   console.time('grid:createRows')
-  var height = options.height
   var rowHeight = options.rowHeight
 
   var prefix = css`
@@ -148,7 +148,7 @@ function createRows (options) {
     }
   `
 
-  function row (data, i) {
+  function row (data, index) {
     var cells = []
     var keys = Object.keys(data)
     var i = 0
