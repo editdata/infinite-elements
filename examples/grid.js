@@ -179,15 +179,16 @@ function createRows (options) {
     return el
   }
 
-  function render (rows) {
-    options.eachRow = function (data, i) {
-      return row(data, i)
-    }
+  options.class = prefix
+  options.eachRow = function (data, i) {
+    return row(data, i)
+  }
 
-    options.class = prefix
-    var result = infiniteElements(rows, options)
+  var renderGrid = infiniteElements(options)
+
+  function render (rows) {
     console.timeEnd('grid:createRows')
-    return result
+    return renderGrid(rows)
   }
 
   return render

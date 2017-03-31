@@ -35,11 +35,13 @@ function eachRow (i) {
   </div>`
 }
 
-var tree = infiniteElements(rows, {
+var render = infiniteElements({
   height: 300,
   rowHeight: 30,
   eachRow: eachRow
 })
+
+var tree = render(rows)
 
 document.body.appendChild(tree)
 

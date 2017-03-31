@@ -12,7 +12,7 @@ for (i; i < l; i++) {
 
 setInterval(function () {
   rows.push(rows.length)
-  tree.render(rows)
+  render(rows)
 }, 1000)
 
 function eachRow (i) {
@@ -21,10 +21,10 @@ function eachRow (i) {
   </div>`
 }
 
-var tree = infiniteElements(rows, {
+var render = infiniteElements({
   height: 300,
   rowHeight: 30,
   eachRow: eachRow
 })
 
-document.body.appendChild(tree)
+document.body.appendChild(render(rows))

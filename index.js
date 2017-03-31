@@ -3,7 +3,7 @@ var html = require('bel')
 var morph = require('nanomorph')
 var debounce = require('debounce')
 
-module.exports = function infiniteElements (rows, options) {
+module.exports = function infiniteElements (options) {
   assert.equal(typeof options, 'object', 'inifite-elements: options object is required')
   var containerHeight = options.height
   var rowHeight = options.rowHeight
@@ -12,10 +12,12 @@ module.exports = function infiniteElements (rows, options) {
   var scrollTop = 0
   var classList = options.class ? 'infinite-elements-container ' + options.class : 'infinite-elements-container'
   var eachRow = options.eachRow
+  var rows
 
   var tree = html`<div class="${classList}" onscroll=${debounce(onscroll, 50)}></div>`
 
-  function render (rows) {
+  function render (data) {
+    rows = data
     console.time('infiniteElements:render')
     var slicedRows = fillRenderArea(rows)
     var rowsToRender = []
@@ -31,7 +33,7 @@ module.exports = function infiniteElements (rows, options) {
     var el = html`<div class="infinite-elements-inner-wrapper" style="height:100%;">
       ${topRow()}
       ${rowsToRender}
-      ${bottomRow()}
+      ${bottomRow(rows.length)}
     </div>`
 
     var wrapper = tree.querySelector('.infinite-elements-inner-wrapper')
@@ -63,9 +65,9 @@ module.exports = function infiniteElements (rows, options) {
     return row
   }
 
-  function bottomRow () {
+  function bottomRow (rowsLength) {
     var row = html`<div class="infinite-elements-bottom-row"></div>`
-    row.style.height = ((rows.length - renderBottom) * rowHeight) + 'px'
+    row.style.height = ((rowsLength - renderBottom) * rowHeight) + 'px'
     return row
   }
 
@@ -85,5 +87,5 @@ module.exports = function infiniteElements (rows, options) {
     return sliced
   }
 
-  return render(rows)
+  return render
 }
